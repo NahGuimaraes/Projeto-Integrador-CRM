@@ -2,15 +2,15 @@ package com.generation.CRM.repository;
 
 import java.util.List;
 
-import com.generation.CRM.model.ConvenioModel;
+import com.generation.CRM.model.Convenio;
 
 import jakarta.validation.Valid;
 
 public interface ConvenioRepository {
 
-	List<ConvenioModel> findAll();
+	List<Convenio> findAll();
 
-	Object save(@Valid ConvenioModel convenio);
+	Object save(@Valid Convenio convenio);
 
 	Object findAll();
 

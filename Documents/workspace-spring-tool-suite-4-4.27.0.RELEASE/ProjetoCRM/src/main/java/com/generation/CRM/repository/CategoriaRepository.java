@@ -2,15 +2,15 @@ package com.generation.CRM.repository;
 
 import java.util.List;
 
-import com.generation.CRM.model.CategoriaModel;
+import com.generation.CRM.model.Categoria;
 
 import jakarta.validation.Valid;
 
 public interface CategoriaRepository {
 
-	List<CategoriaModel> findAll();
+	List<Categoria> findAll();
 
-	Object save(@Valid CategoriaModel categoria);
+	Object save(@Valid Categoria categoria);
 
 	Object findAll();
 

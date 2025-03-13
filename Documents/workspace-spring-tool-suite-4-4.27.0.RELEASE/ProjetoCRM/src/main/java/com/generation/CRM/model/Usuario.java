@@ -21,7 +21,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "tb_usuario")
-public class UsuarioModel {
+public class Usuario {
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +44,7 @@ public class UsuarioModel {
    
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("usuario")
-    private List<ConvenioModel> produtos;
+    private List<Convenio> produtos;
 
 
 	public Long getId() {
@@ -97,12 +97,12 @@ public class UsuarioModel {
 	}
 
 
-	public List<ConvenioModel> getProdutos() {
+	public List<Convenio> getProdutos() {
 		return produtos;
 	}
 
 
-	public void setProdutos(List<ConvenioModel> produtos) {
+	public void setProdutos(List<Convenio> produtos) {
 		this.produtos = produtos;
 	}
 
