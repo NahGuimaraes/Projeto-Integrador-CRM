@@ -1,5 +1,5 @@
 package com.generation.CRM.model;
 
-public class Produto {
+public class ConvenioModel {
 
 }
