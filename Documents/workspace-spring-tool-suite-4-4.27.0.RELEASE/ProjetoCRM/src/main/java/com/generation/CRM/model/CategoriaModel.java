@@ -1,5 +1,5 @@
 package com.generation.CRM.model;
 
-public class Categoria {
+public class CategoriaModel {
 
 }
