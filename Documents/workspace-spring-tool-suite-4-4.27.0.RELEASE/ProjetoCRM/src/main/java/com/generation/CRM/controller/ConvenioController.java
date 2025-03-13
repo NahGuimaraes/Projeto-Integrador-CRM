@@ -1,5 +1,6 @@
 package com.generation.CRM.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -51,6 +52,12 @@ public class ConvenioController {
 	public ResponseEntity<List<Convenio>> getByNome(@PathVariable String nome){
 		return ResponseEntity
 				.ok(convenioRepository.findAllByNomeContainingIgnoreCase(nome));
+	}
+	
+	@GetMapping ("/preco/{preco}")
+	public ResponseEntity<List<Convenio>> getByMaxPreco(@PathVariable BigDecimal preco){
+		return ResponseEntity
+				.ok(convenioRepository.findAllByPrecoLessThanEqual(preco));
 	}
 	
 	@PostMapping
