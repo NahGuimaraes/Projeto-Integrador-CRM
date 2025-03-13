@@ -44,7 +44,7 @@ public class Usuario {
    
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("usuario")
-    private List<Produto> produtos;
+    private List<Convenio> produtos;
 
 
 	public Long getId() {
@@ -97,12 +97,12 @@ public class Usuario {
 	}
 
 
-	public List<Produto> getProdutos() {
+	public List<Convenio> getProdutos() {
 		return produtos;
 	}
 
 
-	public void setProdutos(List<Produto> produtos) {
+	public void setProdutos(List<Convenio> produtos) {
 		this.produtos = produtos;
 	}
 
