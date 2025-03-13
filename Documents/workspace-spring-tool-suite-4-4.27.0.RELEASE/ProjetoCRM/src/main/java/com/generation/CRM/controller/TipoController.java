@@ -1,5 +1,5 @@
 package com.generation.CRM.controller;
 
-public class CategoriaController {
+public class TipoController {
 
 }

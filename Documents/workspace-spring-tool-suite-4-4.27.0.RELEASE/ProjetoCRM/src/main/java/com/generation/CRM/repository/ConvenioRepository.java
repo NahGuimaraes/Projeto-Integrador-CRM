@@ -2,16 +2,18 @@ package com.generation.CRM.repository;
 
 import java.util.List;
 
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+
 import com.generation.CRM.model.Convenio;
 
-import jakarta.validation.Valid;
 
-public interface ConvenioRepository {
 
-	List<Convenio> findAll();
+public interface ConvenioRepository extends JpaRepository<Convenio, Long> {
 
-	Object save(@Valid Convenio convenio);
-
-	Object findAll();
+	public List <Convenio> findAllByPrecoContainingIgnoreCase(@Param("preco") double preco);
+	public List <Convenio> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 
 }

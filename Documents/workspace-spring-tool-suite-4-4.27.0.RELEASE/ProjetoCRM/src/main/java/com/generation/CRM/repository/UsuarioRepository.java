@@ -6,14 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.generation.CRM.model.Usuario;
 
-public interface UsuarioRepository extends JpaRepository<UsuarioRepository, Long> {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	    public Optional<UsuarioRepository> findByEmail(String email);
+	    public Optional<Usuario> findByEmail(String email);
 
-		public Object save(Usuario usuario);
-
-		public void setNome(String nome);
-
-		public void setEmail(String email);
 
 }
