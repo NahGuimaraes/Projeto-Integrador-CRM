@@ -21,7 +21,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "tb_usuario")
-public class Usuario {
+public class UsuarioModel {
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +44,11 @@ public class Usuario {
    
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
     @JsonIgnoreProperties("usuario")
+<<<<<<< HEAD:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/Usuario.java
     private List<Convenio> produtos;
+=======
+    private List<ConvenioModel> produtos;
+>>>>>>> fa156a0123ae3d25130a65842037afbfb566344a:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/UsuarioModel.java
 
 
 	public Long getId() {
@@ -97,12 +101,20 @@ public class Usuario {
 	}
 
 
+<<<<<<< HEAD:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/Usuario.java
 	public List<Convenio> getProdutos() {
+=======
+	public List<ConvenioModel> getProdutos() {
+>>>>>>> fa156a0123ae3d25130a65842037afbfb566344a:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/UsuarioModel.java
 		return produtos;
 	}
 
 
+<<<<<<< HEAD:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/Usuario.java
 	public void setProdutos(List<Convenio> produtos) {
+=======
+	public void setProdutos(List<ConvenioModel> produtos) {
+>>>>>>> fa156a0123ae3d25130a65842037afbfb566344a:Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/ProjetoCRM/src/main/java/com/generation/CRM/model/UsuarioModel.java
 		this.produtos = produtos;
 	}
 
