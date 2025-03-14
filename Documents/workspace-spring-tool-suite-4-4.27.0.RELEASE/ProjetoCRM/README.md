@@ -167,7 +167,7 @@ O projeto será organizado seguindo as boas práticas de desenvolvimento, com a 
 
 ├── main
 
-│ ├── java/com/Projeto-RH/rh
+│ ├── java/com/Projeto-CRM/crm
 
 │ │ ├── controller # Controladores da API
 
