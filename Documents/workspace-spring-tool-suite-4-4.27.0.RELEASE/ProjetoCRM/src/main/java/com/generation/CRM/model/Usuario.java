@@ -16,7 +16,7 @@ import jakarta.validation.constraints.Size;
 
 
 @Entity
-@Table(name = "tb_usuario")
+@Table(name = "tb_usuarios")
 public class Usuario {
  
     @Id
@@ -41,8 +41,8 @@ public class Usuario {
     @ManyToOne
     @JsonIgnoreProperties("usuario")
     private Convenio convenio;
-
-
+    
+    
 	public Long getId() {
 		return id;
 	}

@@ -24,7 +24,7 @@ public class Tipo {
 	private Long id;
 	
 	@NotBlank(message = "O artributo nome é obrigatório!")
-	@Size(min = 5, max = 150, message = "O atributo nome deve conter no mínimo 05 e no máximo 150 caracteres")
+	@Size(min = 2, max = 150, message = "O atributo nome deve conter no mínimo 05 e no máximo 150 caracteres")
 	private String nome;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tipo", cascade = CascadeType.REMOVE)
