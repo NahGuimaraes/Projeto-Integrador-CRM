@@ -15,15 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.CRM.model.Usuario;
-import com.generation.CRM.repository.ConvenioRepository;
-import com.generation.CRM.repository.TipoRepository;
 import com.generation.CRM.repository.UsuarioRepository;
 
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/usuarios")
-@CrossOrigin(origins = "", allowedHeaders = "")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 
     @Autowired

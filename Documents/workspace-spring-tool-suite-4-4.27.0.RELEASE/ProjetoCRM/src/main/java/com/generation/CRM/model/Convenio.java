@@ -1,12 +1,15 @@
 package com.generation.CRM.model;
 
 import java.math.BigDecimal;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -27,6 +30,10 @@ public class Convenio {
     @ManyToOne
     @JsonIgnoreProperties("convenio")
     private Tipo tipo;
+    
+    @OneToMany
+    @JsonIgnoreProperties("convenio")
+    private List<Usuario> usuario;
     
     @NotNull(message = "O preco do convenio é obrigatorio!")
     private BigDecimal preco;
@@ -97,6 +104,12 @@ public class Convenio {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	
-    
+
+	public List<Usuario> getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(List<Usuario> usuario) {
+		this.usuario = usuario;
+	}
 }
