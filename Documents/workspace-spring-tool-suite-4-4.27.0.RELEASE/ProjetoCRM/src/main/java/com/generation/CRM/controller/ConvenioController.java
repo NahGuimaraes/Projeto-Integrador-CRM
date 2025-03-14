@@ -33,8 +33,8 @@ public class ConvenioController {
 	@Autowired
 	private ConvenioRepository convenioRepository;
 	
-	//@Autowired
-	//private TipoRepository tipoRepository;
+	@Autowired
+	private TipoRepository tipoRepository;
 	
 	@GetMapping
 	public ResponseEntity<List<Convenio>> getAll(){

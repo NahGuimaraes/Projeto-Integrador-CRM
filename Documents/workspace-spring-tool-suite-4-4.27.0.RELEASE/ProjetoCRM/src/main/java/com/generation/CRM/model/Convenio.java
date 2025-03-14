@@ -1,8 +1,6 @@
 package com.generation.CRM.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import org.hibernate.annotations.UpdateTimestamp;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,8 +38,8 @@ public class Convenio {
     @NotBlank(message = "A acomodacao é obrigatoria!")
     @Size(min = 15, max = 1000)
     private String acomodacao;
-
-   
+    
+    private String codigo;
 
     // Getters e Setters
     public Long getId() {
@@ -92,5 +90,13 @@ public class Convenio {
 		this.acomodacao = acomodacao;
 	}
 
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	
     
 }
