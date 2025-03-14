@@ -68,6 +68,8 @@ public class ConvenioController {
 		
 		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Tipo não existe!", null);
 		
+		//chamar o service
+		
 	}
 	
 	@PutMapping
