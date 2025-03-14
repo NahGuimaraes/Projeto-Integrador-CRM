@@ -1,5 +1,7 @@
 package com.generation.CRM.model;
 
+import java.math.BigDecimal;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
@@ -12,7 +14,6 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-
 
 
 @Entity
@@ -36,11 +37,14 @@ public class Usuario {
  
     @Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres")
     private String foto;
- 
-   
+
+    private BigDecimal precoPagar;
+    
     @ManyToOne
     @JsonIgnoreProperties("usuario")
     private Convenio convenio;
+    
+    private String codigo;
     
     
 	public Long getId() {
@@ -102,4 +106,25 @@ public class Usuario {
 		this.convenio = convenio;
 	}
 
+
+	public BigDecimal getPrecoPagar() {
+		return precoPagar;
+	}
+
+
+	public void setPrecoPagar(BigDecimal precoPagar) {
+		this.precoPagar = precoPagar;
+	}
+
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	
 }

@@ -40,8 +40,6 @@ public class Convenio {
     @NotBlank(message = "A acomodacao é obrigatoria!")
     @Size(min = 3, max = 1000)
     private String acomodacao;
-    
-    private String codigo;
 
     @ManyToOne
     @JsonIgnoreProperties("convenio")
@@ -99,14 +97,6 @@ public class Convenio {
 
 	public void setAcomodacao(String acomodacao) {
 		this.acomodacao = acomodacao;
-	}
-
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
 	}
 
 	public List<Usuario> getUsuario() {

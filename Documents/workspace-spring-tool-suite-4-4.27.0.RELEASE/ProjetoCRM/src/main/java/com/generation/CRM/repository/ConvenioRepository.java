@@ -16,6 +16,5 @@ public interface ConvenioRepository extends JpaRepository<Convenio, Long> {
 
 	public List<Convenio> findAllByPrecoLessThanEqual(@Param("preco") BigDecimal preco);
 	public List <Convenio> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
-	public List <Convenio> findByCodigo(@Param ("codigo") String codigo);
 
 }

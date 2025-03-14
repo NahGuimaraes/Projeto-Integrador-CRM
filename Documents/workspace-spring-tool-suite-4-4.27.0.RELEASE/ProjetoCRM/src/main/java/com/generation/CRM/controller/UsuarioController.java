@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.CRM.model.Usuario;
 import com.generation.CRM.repository.UsuarioRepository;
+import com.generation.CRM.service.UsuarioService;
 
 import jakarta.validation.Valid;
 
@@ -26,6 +27,9 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+    
+    @Autowired
+    private UsuarioService usuarioService;
 
     // Métodos para gerenciar usuários
     @GetMapping("/all")
@@ -42,7 +46,8 @@ public class UsuarioController {
 
     @PostMapping("/cadastrar")
     public ResponseEntity<Usuario> postUsuario(@RequestBody @Valid Usuario usuario) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuario));
+        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.cadastrarUsuario(usuario));
+        
     }
 
     @PutMapping("/atualizar")
